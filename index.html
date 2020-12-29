@@ -2,7 +2,7 @@
 <html>
   <head>
     <title>持ち越し時間計算するなの</title>
-    <meta charset="utf-8" />
+    <meta charset="utf-8" name="viewport" content="width=device-width" />
   </head>
 
   <body>
@@ -12,7 +12,7 @@
           if (time > 90) {time = 90};
           var min = Math.floor(time / 60);
           var sec = time % 60;
-          var txt = `${min}:${sec}`;
+          var txt = `${min}:` + ("00" + `${sec}`).slice(-2);
           return txt;
         }
     </script>
